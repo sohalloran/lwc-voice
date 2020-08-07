@@ -1,0 +1,15 @@
+<template>
+  voice record
+  <div id="controls">
+    <button id="recordButton" onclick={startRecording}>Record</button>
+    <button id="pauseButton" onclick={pauseRecording}>Pause</button>
+    <button id="stopButton" onclick={stopRecording}>Stop</button>
+  </div>
+  <h3>Recordings</h3>
+  <template if:true={link}>
+    <audio controls="true" src={link}>rec</audio>
+    <br />
+    <lightning-button variant="brand" label="Upload Recording" onclick={uploadFile} class="slds-p-top_small">
+    </lightning-button>
+  </template>
+</template>
